@@ -17,5 +17,5 @@ var sudukuField =   [
                     ];
 
 for(var i = 0; i < size; i++){
-    
+      //var duplicate = sodukuField[i].count('0');
 }
