@@ -4,7 +4,7 @@
 //Maybe use React?
 
 var size = 9;
-var sudukuField =   [   
+var sudokuField =   [   
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -17,5 +17,5 @@ var sudukuField =   [
                     ];
 
 for(var i = 0; i < size; i++){
-      //var duplicate = sodukuField[i].count('0');
+      //var duplicate = sudokuField[i].count('0');
 }
