@@ -20,10 +20,14 @@ var sudokuField =   [
 var prev = null;
 sudokuField.sort();
 for(var i = 0; i < size; i++){
+	prev = "123456789";
 	for(var j = 0; j < size; j++) {
-		if ( sudokuField[i][j] !== prev) { 
+		var num = sudokuField[i][j];
+		if(num === 0) continue;
+		if (prev.contains(num.toString())) { 
 			// No duplicate
-	      		console.log('No Duplicate')
+	      		console.log('No Duplicate');
+			prev.replace(num, '')
       		} else {
         		//Found duplicate
         		console.log('Duplicate')      
