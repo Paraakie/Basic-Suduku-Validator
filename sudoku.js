@@ -5,9 +5,9 @@
 
 var size = 9;
 var sudokuField =   [   
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-                        [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                        [1, 2, 3, 0, 0, 0, 0, 0, 0 ],
+                        [4, 5, 6, 0, 0, 0, 0, 0, 0 ],
+                        [7, 8, 9, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -24,7 +24,7 @@ for(var i = 0; i < size; i++){
 	for(var j = 0; j < size; j++) {
 		var num = sudokuField[i][j];
 		if(num === 0) continue;
-		if (prev.contains(num.toString())) { 
+		if (prev.includes(num.toString())) { 
 			// No duplicate
 	      		console.log('No Duplicate');
 			prev.replace(num, '')
@@ -32,7 +32,6 @@ for(var i = 0; i < size; i++){
         		//Found duplicate
         		console.log('Duplicate')      
 		}
-  		prev = sudokuField[i][j];
   	}
 }
 
