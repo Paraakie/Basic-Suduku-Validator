@@ -20,8 +20,12 @@ var sudokuField =   [
 var prev = null;
 sudokuField.sort();
 for(var i = 0; i < size; i++){
+	
+	//=== Use basic algorithm  for Rows / Colmns / Squares seperatly =====
 	prev = "123456789";
 	for(var j = 0; j < size; j++) {
+
+		
 		var num = sudokuField[i][j];
 		if(num === 0) continue;
 		if (prev.includes(num.toString())) { 
@@ -34,7 +38,9 @@ for(var i = 0; i < size; i++){
 				console.log('Duplicate - Number: ', num)      
 				
 		}
-  	}
+
+	}
+	//=============================
 }
 
 console.log(sudokuField)
