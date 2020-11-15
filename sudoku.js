@@ -5,7 +5,7 @@
 
 var size = 9;
 var sudokuField =   [   
-                        [1, 2, 3, 3, 0, 1, 0, 0, 0 ],
+                        [1, 2, 3, 3, 3, 1, 0, 0, 0 ],
                         [4, 5, 6, 0, 0, 0, 0, 0, 0 ],
                         [7, 8, 9, 0, 0, 0, 0, 0, 0 ],
                         [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -27,10 +27,12 @@ for(var i = 0; i < size; i++){
 		if (prev.includes(num.toString())) { 
 			// No duplicate
 	      		console.log('No Duplicate');
-			prev.replace(num, '')
+				prev = prev.replace(num.toString(), '');
+				console.log(prev)
       		} else {
         		//Found duplicate
-        		console.log('Duplicate')      //doesn't work atm
+				console.log('Duplicate - Number: ', num)      
+				
 		}
   	}
 }
